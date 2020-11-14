@@ -1,59 +1,35 @@
 import React from 'react';
-import { Title, Logo, SubLogo, Links, Span, Strong, Centered, ImagePantanal, Space } from './styles';
-import capivara from '../../assets/capivara_home.svg';
-import pantanal from '../../assets/pantanal.svg';  
-import { Link } from 'react-router-dom';
+
+import pantanal from '../../assets/pantanal.svg';
 import { FiArrowRight } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import '../Home/styles.css';
 
-const Home: React.FC = () => {
-  return (
-   <>
-     <Centered>
-      <Title>HelPantUs</Title>
-
-        <header>
-          <img src = {capivara} alt ="pantanal" width={200} height={150}/>
-        </header>
-
-        <ImagePantanal>
-          <header>
-              <img src = {pantanal} alt ="pantanal" width={500} height={400}/>
-          </header>
-        </ImagePantanal>
+function Home(){
+  return(
+    <div id="page-content">
+      <div className="content-wrapper">
         
-     </Centered>
-   
-     <main>
-        <Logo>
-          A plataforma para cadastro de ONG's<br/> que ajudam o Pantanal.
-        </Logo>
+        <img src={pantanal} alt="logo"/>
+        
+        <main>
+          <span>A plataforma para cadastro de ONG's que ajudam o Pantanal.</span>
+          <p>Aqui ONG's fazem seu cadastro de forma gratuita para ter mais visibilidade
+          na ajuda aos animais e combate a queimadas.</p>
+        </main>
 
-        <SubLogo>Aqui ONG's fazem seu cadastro de forma gratuita para ter mais visibilidade<br/>
-          na ajuda aos animais e combate a queimadas, podendo receber doações.
-        </SubLogo>
+        <Link to="/ong" className="create-ong">
+          <FiArrowRight size={20} color="#fff"/>
+          <p>Venha se cadastrar</p>
+        </Link>
 
-        <Space>
-          <Link to = "ong">
-            <Links>
-              <Span>
-                <FiArrowRight/>
-              </Span>
-                <Strong>Venha cadastrar sua ONG!</Strong>
-              </Links>
-          </Link>
+        <Link to = "ong-cadastrada" className="ong-cadastrada">
+          <FiArrowRight size={20} color="#fff"/>
+          <strong>ONG já cadastrada? Confira!</strong>
+        </Link>
 
-          <Link to = "ong-cadastrada">
-            <Links>
-              <Span>
-                <FiArrowRight/>
-              </Span>
-                <Strong>ONG já cadastrada? Confira!</Strong>
-            </Links>
-          </Link>
-        </Space>
-     </main>
-   </>
-  );
+      </div>
+    </div>
+  )
 }
-
 export default Home;

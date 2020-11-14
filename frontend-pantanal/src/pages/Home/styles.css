@@ -1,0 +1,103 @@
+*{
+  margin:0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+
+p{
+  text-decoration: none;
+  color: #fff;
+}
+
+#page-content{
+  width: 100vw;
+  height: 100vh;
+
+  background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+  color: #fff;
+  font-family: Ubuntu;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-wrapper{
+  width: 100vw;
+  max-width: 1100px;
+
+  height: 100vh;
+  max-height: 640px;
+  background: url('../../assets/capivara_home.svg') no-repeat 100% top;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.content-wrapper main {
+  max-width: 350px;
+}
+
+.content-wrapper main span{
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.content-wrapper main p{
+  margin-top: 14px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.content-wrapper .create-ong{
+  position: absolute;
+  right: 1100px;
+  top:800px;
+  width: 320px;
+  height: 80px;
+  margin-top: 8px;
+  background-color: #008000;
+
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+.create-ong:hover{
+  background-color: #006400;
+}
+
+
+
+.ong-cadastrada{
+  position: absolute;
+  right: 700px;
+  top:800px;
+  color: #fff;
+  width: 320px;
+  height: 80px;
+  margin-top: 8px;
+  background-color: #008000;
+
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+.ong-cadastrada:hover{
+  background-color:#006400 ;
+}
